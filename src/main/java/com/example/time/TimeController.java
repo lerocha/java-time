@@ -14,9 +14,22 @@ import java.time.ZonedDateTime;
 @RequiredArgsConstructor
 public class TimeController {
 
+    private final TimeConfigurationProperties timeConfigurationProperties;
+
     @GetMapping(path = "time")
-    public ResponseEntity<TimeData> getTime() {
+    public ResponseEntity<TimeData> getTimeData() {
         TimeData timeData = new TimeData(LocalDate.now(), LocalTime.now(), LocalDateTime.now(), ZonedDateTime.now());
+        return ResponseEntity.ok(timeData);
+    }
+
+    @GetMapping(path = "time/config")
+    public ResponseEntity<TimeData> getTimeDataFromConfig() {
+        TimeData timeData = new TimeData(
+                timeConfigurationProperties.getLocalDate(),
+                timeConfigurationProperties.getLocalTime(),
+                timeConfigurationProperties.getLocalDateTime(),
+                timeConfigurationProperties.getZonedDateTime()
+        );
         return ResponseEntity.ok(timeData);
     }
 }
