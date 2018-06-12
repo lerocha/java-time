@@ -4,11 +4,14 @@ spring:
 ---
 spring:
   profiles: default
-  jackson.serialization.INDENT_OUTPUT: true
-  jackson.serialization.WRITE_DATES_AS_TIMESTAMPS: false
+  jackson.serialization:
+    INDENT_OUTPUT: true
+    WRITE_DATES_AS_TIMESTAMPS: false
 
 time:
   localDate: 2018-04-18
   localTime: "11:33:33.333"
   localDateTime: 2018-04-18T11:33:33.333
   zonedDateTime: 2018-04-18T11:33:33.333-07:00
+  zoneId: "America/Los_Angeles"
+  zoneOffset: -07:00

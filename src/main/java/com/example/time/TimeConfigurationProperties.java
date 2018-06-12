@@ -4,10 +4,7 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.ZonedDateTime;
+import java.time.*;
 
 @Data
 @Configuration
@@ -17,4 +14,6 @@ public class TimeConfigurationProperties {
     private LocalTime localTime;
     private LocalDateTime localDateTime;
     private ZonedDateTime zonedDateTime;
+    private ZoneId zoneId;
+    private ZoneOffset zoneOffset;
 }
