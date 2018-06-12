@@ -4,4 +4,5 @@ spring:
 ---
 spring:
   profiles: default
+  jackson.serialization.INDENT_OUTPUT: true
   jackson.serialization.WRITE_DATES_AS_TIMESTAMPS: false
