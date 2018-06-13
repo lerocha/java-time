@@ -1,4 +1,4 @@
-package com.example.time;
+package com.github.lerocha.javatime;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

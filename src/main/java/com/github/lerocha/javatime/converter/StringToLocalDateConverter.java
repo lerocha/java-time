@@ -1,17 +1,17 @@
-package com.example.time.converter;
+package com.github.lerocha.javatime.converter;
 
 import org.springframework.boot.context.properties.ConfigurationPropertiesBinding;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Component
 @ConfigurationPropertiesBinding
-public class StringToLocalDateTimeConverter implements Converter<String, LocalDateTime> {
+public class StringToLocalDateConverter implements Converter<String, LocalDate> {
     @Override
-    public LocalDateTime convert(String value) {
-        return StringUtils.isEmpty(value) ? null : LocalDateTime.parse(value);
+    public LocalDate convert(String value) {
+        return StringUtils.isEmpty(value) ? null : LocalDate.parse(value);
     }
 }

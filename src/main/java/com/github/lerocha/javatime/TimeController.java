@@ -1,4 +1,4 @@
-package com.example.time;
+package com.github.lerocha.javatime;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

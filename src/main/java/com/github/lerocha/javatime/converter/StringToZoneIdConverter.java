@@ -1,17 +1,17 @@
-package com.example.time.converter;
+package com.github.lerocha.javatime.converter;
 
 import org.springframework.boot.context.properties.ConfigurationPropertiesBinding;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
-import java.time.LocalDate;
+import java.time.ZoneId;
 
 @Component
 @ConfigurationPropertiesBinding
-public class StringToLocalDateConverter implements Converter<String, LocalDate> {
+public class StringToZoneIdConverter implements Converter<String, ZoneId> {
     @Override
-    public LocalDate convert(String value) {
-        return StringUtils.isEmpty(value) ? null : LocalDate.parse(value);
+    public ZoneId convert(String value) {
+        return StringUtils.isEmpty(value) ? null : ZoneId.of(value);
     }
 }

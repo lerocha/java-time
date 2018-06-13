@@ -1,4 +1,4 @@
-package com.example.time;
+package com.github.lerocha.javatime;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
